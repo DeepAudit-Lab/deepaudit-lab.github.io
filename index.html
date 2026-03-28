@@ -6,8 +6,8 @@
     <title>DeepAudit Lab | AI-Driven Security Auditing for SMEs</title>
     
     <meta name="google-site-verification" content="google270ac7d3cf9ac202" />
-
     <meta name="description" content="DeepAudit Lab: Redefining security with AI-driven orchestration of open-source tools.">
+    
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 
@@ -19,12 +19,12 @@
         .nav-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 30px; }
         .lang-btn { background: var(--card-bg); border: 1px solid var(--border); color: var(--link); padding: 5px 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
         .card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 8px; margin-bottom: 30px; }
-        .tag { background: rgba(88, 166, 255, 0.1); color: var(--link); padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 10px; }
-        .post-meta { color: #8b949e; font-size: 0.9em; margin-bottom: 10px; }
-        h1, h2, h3 { color: #f0f6fc; }
+        .blog-card { border: 1px solid var(--border); padding: 20px; border-radius: 8px; margin-bottom: 15px; transition: 0.3s; }
+        .blog-card:hover { border-color: var(--link); background: #1c2128; }
+        .post-meta { color: #8b949e; font-size: 0.85em; font-family: monospace; }
+        h1, h2, h3 { color: #f0f6fc; margin-top: 10px; }
         .mermaid { background: #f0f6fc; padding: 10px; border-radius: 8px; margin: 20px 0; }
-        footer { text-align: center; margin-top: 50px; color: #8b949e; font-size: 0.85em; }
-        /* 语言切换控制 */
+        footer { text-align: center; margin-top: 50px; color: #8b949e; font-size: 0.85em; border-top: 1px solid var(--border); padding-top: 20px; }
         [lang="zh"] { display: none; }
     </style>
 </head>
@@ -41,12 +41,11 @@
     <main id="content-en" lang="en">
         <section>
             <h1>AI-Driven Security Orchestration</h1>
-            <p>We empower SMEs with expert-level vulnerability insights by intelligently orchestrating world-class open-source security tools.</p>
+            <p>Empowering SMEs with expert-level vulnerability insights via intelligent LLM orchestration.</p>
         </section>
 
         <section class="card">
             <h2>🔬 Core Architecture</h2>
-            <p>Our approach goes beyond simple scanning. We use AI as a semantic brain to filter noise and understand complex logic.</p>
             <div class="mermaid">
                 graph TD
                 A[Code/Network] --> B[Open-Source Scanners]
@@ -58,16 +57,18 @@
         </section>
 
         <section>
-            <h2>📅 Research Notes (Blog)</h2>
-            <div class="card">
-                <div class="post-meta">March 27, 2026 • Research Note #01</div>
-                <h3>Why SMEs Need AI-Powered Orchestration?</h3>
-                <p>Traditional security tools are too noisy. For a small team, 1,000 alerts mean 0 actionable items. DeepAudit Lab bridges this gap by using LLMs to turn "raw data" into "security intelligence"...</p>
-                <a href="#blog01-details" onclick="toggleBlog('en-blog01')">Read Full Article →</a>
-                <div id="en-blog01" style="display:none; margin-top:20px; border-top:1px solid var(--border); padding-top:10px;">
-                    <p><strong>The Challenge:</strong> Most SMEs don't have the budget for a full-time security researcher. Existing tools like Semgrep are powerful but require expertise to tune.</p>
-                    <p><strong>The Solution:</strong> DeepAudit automates the "Expert Review" phase. By feeding scanner outputs into specialized LLM prompts, we reduce false positives by up to 85%.</p>
-                </div>
+            <h2>📅 Research Feed</h2>
+            
+            <div class="blog-card">
+                <div class="post-meta">2026-03-28 • #02</div>
+                <a href="posts/02-prompt-engineering.html"><h3>The Art of Security Prompting: Turning $1 into $100</h3></a>
+                <p>How we use specialized LLM prompts to act as a virtual Senior Security Auditor for SMEs...</p>
+            </div>
+
+            <div class="blog-card">
+                <div class="post-meta">2026-03-27 • #01</div>
+                <a href="posts/01-why-sme-needs-ai.html"><h3>Why SMEs Need AI-Powered Orchestration?</h3></a>
+                <p>Bridging the gap between high-end security expertise and limited SME budgets.</p>
             </div>
         </section>
     </main>
@@ -75,12 +76,11 @@
     <main id="content-zh" lang="zh">
         <section>
             <h1>AI 驱动的安全编排</h1>
-            <p>通过智能编排世界级的开源安全工具，为中小企业提供专家级的漏洞洞察。</p>
+            <p>通过智能 LLM 编排，为中小企业提供专家级的漏洞洞察方案。</p>
         </section>
 
         <section class="card">
             <h2>🔬 核心架构</h2>
-            <p>我们的方法超越了简单的扫描。我们将 AI 作为语义大脑，用于过滤噪声并理解复杂的业务逻辑。</p>
             <div class="mermaid">
                 graph TD
                 A[代码/网络] --> B[开源扫描工具]
@@ -93,38 +93,20 @@
 
         <section>
             <h2>📅 研发日志 (博客)</h2>
-            <div class="card">
-                <div class="post-meta">2026年3月27日 • 研发日志 #01</div>
-                <h3>为什么中小企业需要 AI 驱动的编排？</h3>
-                <p>传统安全工具产生的噪声太大。对于小团队，1000 条告警等于 0 条有效信息。DeepAudit 实验室通过 LLM 将“原始数据”转化为“安全情报”...</p>
-                <a href="#blog01-zh" onclick="toggleBlog('zh-blog01')">阅读全文 →</a>
-                <div id="zh-blog01" style="display:none; margin-top:20px; border-top:1px solid var(--border); padding-top:10px;">
-                    <p><strong>挑战：</strong> 大多数中小企业没有预算聘请全职安全研究员。现有的 Semgrep 等工具很强大，但需要专家进行调优。</p>
-                    <p><strong>方案：</strong> DeepAudit 自动化了“专家审核”阶段。通过将扫描器输出输入到专门的 LLM 提示词中，我们将误报率降低了高达 85%。</p>
-                </div>
+
+            <div class="blog-card">
+                <div class="post-meta">2026-03-28 • #02</div>
+                <a href="posts/02-prompt-engineering.html"><h3>提示词的艺术：将 1 美元的 AI 调用变成价值 100 美元的资深审计师</h3></a>
+                <p>探讨 DeepAudit 如何利用三层提示词策略过滤扫描噪声，实现自动化审计。</p>
+            </div>
+
+            <div class="blog-card">
+                <div class="post-meta">2026-03-27 • #01</div>
+                <a href="posts/01-why-sme-needs-ai.html"><h3>为什么中小企业需要 AI 驱动的编排？</h3></a>
+                <p>分析在 2026 年，中小企业如何利用 AI 缩小与巨头之间的安全鸿沟。</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 DeepAudit Lab | Built on GitHub Pages | <a href="https://github.com/DeepAudit-Lab">GitHub Repository</a></p>
-    </footer>
-
-    <script>
-        function setLang(lang) {
-            document.getElementById('content-en').style.display = (lang === 'en' ? 'block' : 'none');
-            document.getElementById('content-zh').style.display = (lang === 'zh' ? 'block' : 'none');
-            localStorage.setItem('lang', lang);
-        }
-        function toggleBlog(id) {
-            const el = document.getElementById(id);
-            el.style.display = (el.style.display === 'none' ? 'block' : 'none');
-        }
-        // Load preference
-        window.onload = () => {
-            const savedLang = localStorage.getItem('lang') || 'en';
-            setLang(savedLang);
-        };
-    </script>
-</body>
-</html>
+        <p>&copy; 2026 DeepAudit Lab | Hosted on <a href="https://deepaudit
