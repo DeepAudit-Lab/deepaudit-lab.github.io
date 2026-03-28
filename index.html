@@ -79,4 +79,52 @@
         </section>
 
         <section class="card">
-            <h2>
+            <h2>🔬 核心架构</h2>
+            <p>我们的方法超越了简单的扫描。我们将 AI 作为语义大脑，用于过滤噪声并理解复杂的业务逻辑。</p>
+            <div class="mermaid">
+                graph TD
+                A[代码/网络] --> B[开源扫描工具]
+                B --> C{DeepAudit AI 大脑}
+                C -->|过滤误报| D[高价值发现]
+                C -->|逻辑审计| E[漏洞验证]
+                D & E --> F[可落地报告]
+            </div>
+        </section>
+
+        <section>
+            <h2>📅 研发日志 (博客)</h2>
+            <div class="card">
+                <div class="post-meta">2026年3月27日 • 研发日志 #01</div>
+                <h3>为什么中小企业需要 AI 驱动的编排？</h3>
+                <p>传统安全工具产生的噪声太大。对于小团队，1000 条告警等于 0 条有效信息。DeepAudit 实验室通过 LLM 将“原始数据”转化为“安全情报”...</p>
+                <a href="#blog01-zh" onclick="toggleBlog('zh-blog01')">阅读全文 →</a>
+                <div id="zh-blog01" style="display:none; margin-top:20px; border-top:1px solid var(--border); padding-top:10px;">
+                    <p><strong>挑战：</strong> 大多数中小企业没有预算聘请全职安全研究员。现有的 Semgrep 等工具很强大，但需要专家进行调优。</p>
+                    <p><strong>方案：</strong> DeepAudit 自动化了“专家审核”阶段。通过将扫描器输出输入到专门的 LLM 提示词中，我们将误报率降低了高达 85%。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DeepAudit Lab | Built on GitHub Pages | <a href="https://github.com/DeepAudit-Lab">GitHub Repository</a></p>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            document.getElementById('content-en').style.display = (lang === 'en' ? 'block' : 'none');
+            document.getElementById('content-zh').style.display = (lang === 'zh' ? 'block' : 'none');
+            localStorage.setItem('lang', lang);
+        }
+        function toggleBlog(id) {
+            const el = document.getElementById(id);
+            el.style.display = (el.style.display === 'none' ? 'block' : 'none');
+        }
+        // Load preference
+        window.onload = () => {
+            const savedLang = localStorage.getItem('lang') || 'en';
+            setLang(savedLang);
+        };
+    </script>
+</body>
+</html>
