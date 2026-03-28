@@ -18,12 +18,22 @@
         a:hover { text-decoration: underline; }
         .nav-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 30px; }
         .lang-btn { background: var(--card-bg); border: 1px solid var(--border); color: var(--link); padding: 5px 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        
+        /* 顶部大卡片 */
         .card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 8px; margin-bottom: 30px; }
-        .blog-card { border: 1px solid var(--border); padding: 20px; border-radius: 8px; margin-bottom: 15px; transition: 0.3s; }
-        .blog-card:hover { border-color: var(--link); background: #1c2128; }
+        
+        /* 博客列表卡片 (拿掉了内部的图，更紧凑) */
+        .blog-card { border: 1px solid var(--border); padding: 20px; border-radius: 8px; margin-bottom: 15px; transition: 0.3s; background: transparent; }
+        .blog-card:hover { border-color: var(--link); background: var(--card-bg); }
+        .blog-card h3 { margin-top: 5px; color: var(--link); margin-bottom: 10px; }
+        .blog-card p { font-size: 0.95em; color: #8b949e; margin: 0; }
+        
         .post-meta { color: #8b949e; font-size: 0.85em; font-family: monospace; }
-        h1, h2, h3 { color: #f0f6fc; margin-top: 10px; }
+        h1, h2, h3 { color: #f0f6fc; }
+        
+        /* 顶部架构图样式 */
         .mermaid { background: #f0f6fc; padding: 10px; border-radius: 8px; margin: 20px 0; }
+        
         footer { text-align: center; margin-top: 50px; color: #8b949e; font-size: 0.85em; border-top: 1px solid var(--border); padding-top: 20px; }
         [lang="zh"] { display: none; }
     </style>
@@ -45,7 +55,7 @@
         </section>
 
         <section class="card">
-            <h2>🔬 Core Architecture</h2>
+            <h2>🔬 Core Orchestration Architecture</h2>
             <div class="mermaid">
                 graph TD
                 A[Code/Network] --> B[Open-Source Scanners]
@@ -57,12 +67,12 @@
         </section>
 
         <section>
-            <h2>📅 Research Feed</h2>
+            <h2>📅 Research Feed (Pure Content)</h2>
             
             <div class="blog-card">
                 <div class="post-meta">2026-03-28 • #02</div>
                 <a href="posts/02-prompt-engineering.html"><h3>The Art of Security Prompting: Turning $1 into $100</h3></a>
-                <p>How we use specialized LLM prompts to act as a virtual Senior Security Auditor for SMEs...</p>
+                <p>Bypassing LLM hallucinations to get expert-level security triage for SME projects.</p>
             </div>
 
             <div class="blog-card">
@@ -80,7 +90,7 @@
         </section>
 
         <section class="card">
-            <h2>🔬 核心架构</h2>
+            <h2>🔬 核心编排架构</h2>
             <div class="mermaid">
                 graph TD
                 A[代码/网络] --> B[开源扫描工具]
@@ -92,21 +102,21 @@
         </section>
 
         <section>
-            <h2>📅 研发日志 (博客)</h2>
+            <h2>📅 研发日志 (纯内容目录)</h2>
 
             <div class="blog-card">
                 <div class="post-meta">2026-03-28 • #02</div>
                 <a href="posts/02-prompt-engineering.html"><h3>提示词的艺术：将 1 美元的 AI 调用变成价值 100 美元的资深审计师</h3></a>
-                <p>探讨 DeepAudit 如何利用三层提示词策略过滤扫描噪声，实现自动化审计。</p>
+                <p>DeepAudit 利用三层提示词策略过滤扫描噪声，实现面向 SME 的自动化漏洞审计。</p>
             </div>
 
             <div class="blog-card">
                 <div class="post-meta">2026-03-27 • #01</div>
                 <a href="posts/01-why-sme-needs-ai.html"><h3>为什么中小企业需要 AI 驱动的编排？</h3></a>
-                <p>分析在 2026 年，中小企业如何利用 AI 缩小与巨头之间的安全鸿沟。</p>
+                <p>分析 2026 年，中小企业如何利用 AI 缩小与技术巨头之间的安全鸿沟。</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 DeepAudit Lab | Hosted on <a href="https://deepaudit
+        <p>&copy; 2026 DeepAudit Lab | Vercel Mirror | <a href="
