@@ -3,32 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepAudit Lab | AI-Driven Security Auditing</title>
+    <title>DeepAudit Lab | AI-Driven Security Auditing for SMEs</title>
+    
     <meta name="google-site-verification" content="google270ac7d3cf9ac202" />
+
+    <meta name="description" content="DeepAudit Lab: Redefining security with AI-driven orchestration of open-source tools.">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+
     <style>
-        body { font-family: sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        a { color: #58a6ff; }
-        .btn { border: 1px solid #30363d; padding: 5px 10px; cursor: pointer; border-radius: 5px; background: #161b22; color: #58a6ff; }
+        :root { --bg: #0d1117; --card-bg: #161b22; --text: #c9d1d9; --link: #58a6ff; --border: #30363d; --accent: #238636; }
+        body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 30px; }
+        .lang-btn { background: var(--card-bg); border: 1px solid var(--border); color: var(--link); padding: 5px 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 8px; margin-bottom: 30px; }
+        .tag { background: rgba(88, 166, 255, 0.1); color: var(--link); padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 10px; }
+        .post-meta { color: #8b949e; font-size: 0.9em; margin-bottom: 10px; }
+        h1, h2, h3 { color: #f0f6fc; }
+        .mermaid { background: #f0f6fc; padding: 10px; border-radius: 8px; margin: 20px 0; }
+        footer { text-align: center; margin-top: 50px; color: #8b949e; font-size: 0.85em; }
+        /* 语言切换控制 */
+        [lang="zh"] { display: none; }
     </style>
 </head>
 <body>
-    <div style="text-align: right;">
-        <button class="btn" onclick="document.getElementById('en').style.display='block'; document.getElementById('zh').style.display='none';">English</button>
-        <button class="btn" onclick="document.getElementById('en').style.display='none'; document.getElementById('zh').style.display='block';">中文</button>
-    </div>
 
-    <div id="en">
-        <h1>DeepAudit Lab 🛡️</h1>
-        <p>Redefining security with AI-driven orchestration. Expert findings at minimal cost for SMEs.</p>
-        <hr>
-        <p>Check our <a href="https://github.com/DeepAudit-Lab/deepaudit-lab.github.io/blob/main/README.md">README.md</a> for full technical details.</p>
-    </div>
+    <header class="nav-header">
+        <div style="font-size: 1.5em; font-weight: bold;">🛡️ DeepAudit Lab</div>
+        <div>
+            <button class="lang-btn" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('zh')">中文</button>
+        </div>
+    </header>
 
-    <div id="zh" style="display:none;">
-        <h1>DeepAudit 实验室 🛡️</h1>
-        <p>AI 驱动编排，重新定义安全审计。为中小企业提供低成本、专家级的漏洞评估方案。</p>
-        <hr>
-        <p>查看我们的 <a href="https://github.com/DeepAudit-Lab/deepaudit-lab.github.io/blob/main/README.md">README.md</a> 获取完整技术细节。</p>
-    </div>
-</body>
-</html>
+    <main id="content-en" lang="en">
+        <section>
+            <h1>AI-Driven Security Orchestration</h1>
+            <p>We empower SMEs with expert-level vulnerability insights by intelligently orchestrating world-class open-source security tools.</p>
+        </section>
+
+        <section class="card">
+            <h2>🔬 Core Architecture</h2>
+            <p>Our approach goes beyond simple scanning. We use AI as a semantic brain to filter noise and understand complex logic.</p>
+            <div class="mermaid">
+                graph TD
+                A[Code/Network] --> B[Open-Source Scanners]
+                B --> C{DeepAudit AI Brain}
+                C -->|Filter Noise| D[High-Fidelity Insights]
+                C -->|Logic Audit| E[Exploit Verification]
+                D & E --> F[Actionable Report]
+            </div>
+        </section>
+
+        <section>
+            <h2>📅 Research Notes (Blog)</h2>
+            <div class="card">
+                <div class="post-meta">March 27, 2026 • Research Note #01</div>
+                <h3>Why SMEs Need AI-Powered Orchestration?</h3>
+                <p>Traditional security tools are too noisy. For a small team, 1,000 alerts mean 0 actionable items. DeepAudit Lab bridges this gap by using LLMs to turn "raw data" into "security intelligence"...</p>
+                <a href="#blog01-details" onclick="toggleBlog('en-blog01')">Read Full Article →</a>
+                <div id="en-blog01" style="display:none; margin-top:20px; border-top:1px solid var(--border); padding-top:10px;">
+                    <p><strong>The Challenge:</strong> Most SMEs don't have the budget for a full-time security researcher. Existing tools like Semgrep are powerful but require expertise to tune.</p>
+                    <p><strong>The Solution:</strong> DeepAudit automates the "Expert Review" phase. By feeding scanner outputs into specialized LLM prompts, we reduce false positives by up to 85%.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="content-zh" lang="zh">
+        <section>
+            <h1>AI 驱动的安全编排</h1>
+            <p>通过智能编排世界级的开源安全工具，为中小企业提供专家级的漏洞洞察。</p>
+        </section>
+
+        <section class="card">
+            <h2>
